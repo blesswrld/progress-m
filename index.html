@@ -219,7 +219,7 @@
             </section>
 
             <!-- Секция 3: О компании в цифрах -->
-            <section id="stats" class="stats-section fade-in-section">
+            <section id="about" class="stats-section fade-in-section">
                 <div class="container">
                     <div class="stats-grid">
                         <div class="stat-item">
@@ -246,28 +246,52 @@
                 <div class="container">
                     <h2>Наши преимущества</h2>
                     <div class="advantages-grid">
+                        <!-- Преимущество 1 -->
                         <div class="advantage-item">
+                            <img
+                                src="/icons/carpark.png"
+                                alt="Иконка автопарка"
+                                class="advantage-icon"
+                            />
                             <h3>Собственный автопарк</h3>
                             <p>
                                 Гарантия наличия техники и лучших цен, без
                                 посредников.
                             </p>
                         </div>
+                        <!-- Преимущество 2 -->
                         <div class="advantage-item">
+                            <img
+                                src="/icons/team.png"
+                                alt="Иконка команды"
+                                class="advantage-icon"
+                            />
                             <h3>Опытная команда</h3>
                             <p>
                                 Квалифицированные инженеры и операторы с
                                 многолетним стажем.
                             </p>
                         </div>
+                        <!-- Преимущество 3 -->
                         <div class="advantage-item">
+                            <img
+                                src="/icons/deadline.png"
+                                alt="Иконка сроков"
+                                class="advantage-icon"
+                            />
                             <h3>Точное соблюдение сроков</h3>
                             <p>
                                 Работаем строго по графику, прописанному в
                                 договоре.
                             </p>
                         </div>
+                        <!-- Преимущество 4 -->
                         <div class="advantage-item">
+                            <img
+                                src="/icons/quality.png"
+                                alt="Иконка качества"
+                                class="advantage-icon"
+                            />
                             <h3>Гарантия качества</h3>
                             <p>
                                 Используем сертифицированные материалы и
@@ -389,29 +413,62 @@
                         Наш менеджер свяжется с вами в течение 15 минут для
                         уточнения деталей.
                     </p>
-                    <form id="contact-form" class="contact-form">
-                        <input
-                            type="text"
-                            name="user_name"
-                            placeholder="Ваше имя"
-                            required
-                        />
-                        <input
-                            type="tel"
-                            name="user_phone"
-                            placeholder="Ваш телефон"
-                            required
-                        />
-                        <input
-                            type="email"
-                            name="user_email"
-                            placeholder="Ваш Email"
-                            required
-                        />
-                        <textarea
-                            name="message"
-                            placeholder="Комментарий к заявке"
-                        ></textarea>
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <!-- Поле "Имя" -->
+                        <div class="form-field">
+                            <label for="user_name" class="visually-hidden"
+                                >Ваше имя</label
+                            >
+                            <input
+                                type="text"
+                                id="user_name"
+                                name="user_name"
+                                placeholder="Ваше имя"
+                                required
+                            />
+                            <div class="error-container"></div>
+                        </div>
+                        <!-- Поле "Телефон" -->
+                        <div class="form-field">
+                            <label for="user_phone" class="visually-hidden"
+                                >Ваш телефон</label
+                            >
+                            <input
+                                type="tel"
+                                id="user_phone"
+                                name="user_phone"
+                                placeholder="Ваш телефон"
+                                required
+                            />
+                            <div class="error-container"></div>
+                        </div>
+                        <!-- Поле "Email" -->
+                        <div class="form-field">
+                            <label for="user_email" class="visually-hidden"
+                                >Ваш Email</label
+                            >
+                            <input
+                                type="email"
+                                id="user_email"
+                                name="user_email"
+                                placeholder="Ваш Email"
+                                required
+                            />
+                            <div class="error-container"></div>
+                        </div>
+                        <!-- Поле "Комментарий" -->
+                        <div class="form-field">
+                            <!-- Textarea тоже нужен id для связи с label -->
+                            <label for="message" class="visually-hidden"
+                                >Комментарий к заявке</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Комментарий к заявке"
+                            ></textarea>
+                            <div class="error-container"></div>
+                        </div>
                         <button type="submit" class="btn">
                             Отправить заявку
                         </button>

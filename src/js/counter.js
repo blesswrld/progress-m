@@ -23,7 +23,7 @@ const animateCounter = (element, target, suffix, duration) => {
 
 // Функция-инициализатор, которую мы будем вызывать
 export function initCounterAnimation() {
-    const statsSection = document.getElementById("stats");
+    const statsSection = document.getElementById("about");
     if (!statsSection) return;
 
     const counters = statsSection.querySelectorAll("strong[data-target]");

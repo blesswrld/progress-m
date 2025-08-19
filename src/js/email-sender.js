@@ -1,15 +1,18 @@
 import emailjs from "@emailjs/browser";
 // Импортируем нашу функцию уведомлений
 import { showNotification } from "./notifications.js";
+import { FormValidator } from "./form-validator.js"; // Импортируем наш класс
 
 export function initEmailSender() {
     const form = document.getElementById("contact-form");
     if (!form) return;
 
+    const validator = new FormValidator(form); // Создаем экземпляр валидатора
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.textContent;
 
-    form.addEventListener("submit", function (event) {
+    // Вешаем обработчик на успешную валидацию
+    validator.onSuccess((event) => {
         event.preventDefault();
 
         const serviceID = "service_n0lglt9";
@@ -19,22 +22,26 @@ export function initEmailSender() {
         submitButton.disabled = true;
         submitButton.textContent = "Отправка...";
 
-        emailjs.sendForm(serviceID, templateID, this, publicKey).then(
-            () => {
-                // --- УСПЕХ ---
-                showNotification("Ваша заявка успешно отправлена!", "success");
-                form.reset();
+        emailjs
+            .sendForm(serviceID, templateID, form, publicKey)
+            .then(
+                () => {
+                    // --- УСПЕХ ---
+                    showNotification(
+                        "Ваша заявка успешно отправлена!",
+                        "success"
+                    );
+                    form.reset();
+                },
+                (err) => {
+                    // --- ОШИБКА ---
+                    showNotification("Произошла ошибка при отправке.", "error");
+                    console.error("EMAILJS FAILED...", err);
+                }
+            )
+            .finally(() => {
                 submitButton.disabled = false;
                 submitButton.textContent = originalButtonText;
-            },
-            (err) => {
-                // --- ОШИБКА ---
-                showNotification("Произошла ошибка при отправке.", "error");
-                console.error("EMAILJS FAILED...", err); // Оставляем ошибку в консоли для отладки
-
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
-            }
-        );
+            });
     });
 }

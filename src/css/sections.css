@@ -95,11 +95,19 @@ main {
 .advantages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 40px;
+    text-align: center;
+}
+
+.advantage-icon {
+    height: 60px;
+    width: auto;
+    margin: 0 auto 20px;
 }
 
 .advantage-item h3 {
     color: var(--primary-color);
+    margin-top: 0;
 }
 
 .portfolio-section {
@@ -193,7 +201,11 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 0 20px;
+}
+
+.form-field {
+    margin-bottom: 5px;
 }
 
 .contact-form input,
@@ -204,17 +216,42 @@ main {
     border-radius: var(--border-radius);
     font-family: var(--font-family);
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
 .contact-form textarea {
-    grid-column: 1 / -1;
-    resize: vertical;
+    resize: none;
     min-height: 120px;
+}
+
+.contact-form .is-invalid {
+    border-color: #e74c3c !important;
+}
+
+.error-container {
+    min-height: 20px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.just-validate-error-label {
+    color: #e74c3c !important;
+    font-size: 0.85rem !important;
 }
 
 .contact-form button {
     grid-column: 1 / -1;
     justify-self: center;
+    margin-top: 15px;
+}
+
+.form-field:nth-child(1),
+.form-field:nth-child(2) {
+    grid-column: auto;
+}
+.form-field:nth-child(3),
+.form-field:nth-child(4) {
+    grid-column: 1 / -1;
 }
 
 .footer {
@@ -267,5 +304,10 @@ main {
     }
     .contact-form {
         grid-template-columns: 1fr;
+    }
+    .form-field:nth-child(1),
+    .form-field:nth-child(2),
+    .form-field:nth-child(3) {
+        grid-column: 1 / -1;
     }
 }

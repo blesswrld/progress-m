@@ -17,7 +17,7 @@ export function initScrollObserver() {
                 entry.target.classList.add("is-visible");
 
                 // Если это наша секция со статистикой, запускаем счетчик
-                if (entry.target.id === "stats") {
+                if (entry.target.id === "about") {
                     initCounterAnimation();
                 }
 

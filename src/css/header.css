@@ -53,7 +53,8 @@
     transition: width 0.3s ease;
 }
 
-.desktop-nav a:hover::after {
+.desktop-nav a:hover::after,
+.desktop-nav a.active::after {
     width: 100%;
 }
 

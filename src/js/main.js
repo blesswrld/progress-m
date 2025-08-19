@@ -22,5 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
     initScrollObserver();
     initEmailSender();
-    initHeaderScroll(); // Запускаем новую функцию
+    initHeaderScroll(); // Запускаем функцию
 });

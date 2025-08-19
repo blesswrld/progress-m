@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "@emailjs/browser": "^4.4.1",
+        "just-validate": "^4.3.0",
         "toastify-js": "^1.12.0"
     }
 }
