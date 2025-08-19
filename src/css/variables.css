@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #009688;
+    --primary-dark-color: #00796b;
+    --dark-color: #212121;
+    --text-color: #424242;
+    --light-color: #ffffff;
+    --background-light-gray: #f5f5f5;
+
+    --font-family: "Inter", system-ui, -apple-system, sans-serif;
+    --container-width: 1200px;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
