@@ -10,7 +10,7 @@ main {
     justify-content: center;
     text-align: center;
     color: var(--light-color);
-    background: url("./bg/bg-main.jpg") no-repeat center center/cover;
+    background: url("./bg/bg-main.jpg") no-repeat center center/cover !important;
     padding: 40px 0;
 }
 
