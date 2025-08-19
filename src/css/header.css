@@ -20,8 +20,22 @@
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
 .logo img {
-    height: 60px;
+    height: 40px;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    line-height: 1;
 }
 
 .desktop-nav ul {

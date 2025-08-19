@@ -86,7 +86,8 @@
         <header class="header">
             <div class="container header__container">
                 <a href="/" class="logo">
-                    <img src="/progressm-logo.png" alt="Логотип Прогресс М" />
+                    <img src="/progressm-logo.svg" alt="Логотип Прогресс М" />
+                    <span class="logo-text">Прогресс М</span>
                 </a>
                 <nav class="desktop-nav">
                     <ul>
@@ -191,27 +192,77 @@
             <!-- Секция 2: Наши услуги -->
             <section id="services" class="services-section fade-in-section">
                 <div class="container">
-                    <h2>Наши услуги</h2>
-                    <div class="services-grid">
-                        <div class="service-card">
-                            <h3>Строительство</h3>
-                            <p>Дороги, площадки, фундаменты</p>
+                    <!-- Блок 1: Поставка материалов -->
+                    <div class="services-category">
+                        <h3 class="services-category__title">
+                            Поставка материалов
+                        </h3>
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <h4>Поставка песка</h4>
+                                <p>
+                                    Карьерный, мытый и речной песок различных
+                                    фракций — мелкий, средний и крупный.
+                                </p>
+                            </div>
+                            <div class="service-card">
+                                <h4>Поставка гравийного щебня</h4>
+                                <p>
+                                    Фракции 3-5, 3-10, 5-20, 20-40 и 40-70 мм
+                                    для разных строительных задач.
+                                </p>
+                            </div>
+                            <div class="service-card">
+                                <h4>Поставка известнякового щебня</h4>
+                                <p>
+                                    Фракции 5-20, 20-40 и 40-70 мм, обеспечивая
+                                    высокое качество и надежность.
+                                </p>
+                            </div>
+                            <div class="service-card">
+                                <h4>Смеси ЩПС С4 и С5</h4>
+                                <p>
+                                    Щебеночно-песчаные смеси марок С4 и С5 для
+                                    эффективного использования в строительстве.
+                                </p>
+                            </div>
                         </div>
-                        <div class="service-card">
-                            <h3>Аренда спецтехники</h3>
-                            <p>Экскаваторы, бульдозеры, краны</p>
-                        </div>
-                        <div class="service-card">
-                            <h3>Грузоперевозки</h3>
-                            <p>Негабаритные грузы, сыпучие материалы</p>
-                        </div>
-                        <div class="service-card">
-                            <h3>Земляные работы</h3>
-                            <p>Рытье котлованов, планировка территории</p>
-                        </div>
-                        <div class="service-card">
-                            <h3>Демонтаж зданий</h3>
-                            <p>Снос и утилизация конструкций</p>
+                    </div>
+
+                    <!-- Блок 2: Строительно-монтажные работы -->
+                    <div class="services-category">
+                        <h3 class="services-category__title">
+                            Строительно-монтажные работы
+                        </h3>
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <h4>Устройство ограждающих конструкций</h4>
+                                <p>
+                                    Монтаж конструкций, обеспечивающих надежную
+                                    защиту и долговечность зданий.
+                                </p>
+                            </div>
+                            <div class="service-card">
+                                <h4>Возведение стен и перегородок</h4>
+                                <p>
+                                    Кладка из газоблока, кирпича, ПГП и блоков
+                                    СКЦ с гарантией качества.
+                                </p>
+                            </div>
+                            <div class="service-card">
+                                <h4>Устройство кровли</h4>
+                                <p>
+                                    Профессиональный монтаж кровли любого типа с
+                                    использованием современных материалов.
+                                </p>
+                            </div>
+                            <div class="service-card">
+                                <h4>Отделочные работы</h4>
+                                <p>
+                                    Выполнение черновых и чистовых отделочных
+                                    работ для создания эстетичного интерьера.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -222,7 +273,7 @@
                 <div class="container">
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <strong data-target="10" data-suffix="+">0</strong>
+                            <strong data-target="2" data-suffix="+">0</strong>
                             <span>лет на рынке</span>
                         </div>
                         <div class="stat-item">
@@ -267,7 +318,7 @@
                             />
                             <h3>Опытная команда</h3>
                             <p>
-                                Квалифицированные инженеры и операторы с
+                                Квалифицированные бригады и водители с
                                 многолетним стажем.
                             </p>
                         </div>
@@ -356,10 +407,10 @@
                     <div class="fleet-grid">
                         <div class="fleet-item">
                             <img
-                                src="https://yard-imperial.ru/images/new/1.jpeg"
+                                src="./src/images/carpark/FAWJ6CA3310.jpg"
                                 alt="Экскаватор"
                             />
-                            <p>Экскаватор-погрузчик JCB 3CX</p>
+                            <p>FAW J6 CA3310</p>
                         </div>
                         <div class="fleet-item">
                             <img
@@ -385,20 +436,33 @@
                     <h2>Нам доверяют</h2>
                     <div class="partners-logos">
                         <img
-                            src="./src/images/partners/russia-post.png"
+                            src="./src/images/partners/fsk.png"
+                            alt="Логотип партнера 4"
+                        />
+                        <img
+                            src="./src/images/partners/ao-urs.png"
                             alt="Логотип партнера 1"
                         />
                         <img
-                            src="./src/images/partners/pec.png"
+                            src="./src/images/partners/samolet.png"
+                            alt="Логотип партнера 5"
+                        />
+                        <img
+                            src="./src/images/partners/autoban.png"
                             alt="Логотип партнера 2"
                         />
                         <img
-                            src="./src/images/partners/magic-trans.png"
+                            src="./src/images/partners/darstroy.png"
                             alt="Логотип партнера 3"
                         />
+
                         <img
-                            src="./src/images/partners/vozozov.png"
-                            alt="Логотип партнера 4"
+                            src="./src/images/partners/transingstroy.png"
+                            alt="Логотип партнера 6"
+                        />
+                        <img
+                            src="./src/images/partners/tsm.png"
+                            alt="Логотип партнера 7"
                         />
                     </div>
                 </div>
@@ -407,7 +471,7 @@
             <!-- Секция 8: Контакты и форма заявки -->
             <section id="contacts" class="contact-section fade-in-section">
                 <div class="container">
-                    <h2>Оставьте заявку на расчет</h2>
+                    <h2>Связаться с нами</h2>
                     <p>
                         Наш менеджер свяжется с вами в течение 15 минут для
                         уточнения деталей.

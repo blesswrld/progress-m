@@ -51,6 +51,38 @@ main {
     gap: 30px;
 }
 
+.services-category {
+    margin-bottom: 60px;
+}
+
+.services-category:last-child {
+    margin-bottom: 0;
+}
+
+.services-category__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.services-category__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.service-card h4 {
+    margin-top: 0;
+    color: var(--dark-color);
+}
+
 .service-card {
     background-color: var(--light-color);
     padding: 30px;
@@ -175,7 +207,7 @@ main {
 }
 
 .partners-logos img {
-    max-height: 50px;
+    max-height: 120px;
     filter: grayscale(100%);
     opacity: 0.7;
     transition: filter 0.3s ease, opacity 0.3s ease;
@@ -184,6 +216,12 @@ main {
 .partners-logos img:hover {
     filter: grayscale(0%);
     opacity: 1;
+}
+
+@media (max-width: 576px) {
+    .partners-logos {
+        flex-direction: column;
+    }
 }
 
 .contact-section {
