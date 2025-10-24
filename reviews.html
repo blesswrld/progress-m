@@ -79,7 +79,7 @@
         />
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Прогресс М — Транспортно-строительная компания</title>
+        <title>Отзывы клиентов — Прогресс М</title>
     </head>
     <body>
         <header class="header">
@@ -170,98 +170,119 @@
         </div>
 
         <main>
-            <section id="hero" class="hero-section">
-                <div class="hero-overlay"></div>
+            <section class="reviews-section fade-in-section">
                 <div class="container">
-                    <h1 class="fade-in-section">
-                        Строим пути к успеху с Прогресс М — Ваш надежный партнер
-                        в строительстве!
-                    </h1>
-                    <p class="fade-in-section">
-                        Выполняем строительно-монтажные работы, занимаемся
-                        поставкой и перевозкой нерудных материалов по всей МО.
+                    <h2>Отзывы наших клиентов</h2>
+                    <div class="reviews-grid">
+                        <div class="review-card">
+                            <div class="review-card__header">
+                                <img
+                                    src="/src/images/reviews/review-1.jpg"
+                                    alt="Аватар клиента"
+                                    class="review-card__avatar"
+                                />
+                                <div class="review-card__author">
+                                    <strong>Иван Петров</strong>
+                                    <span>Гендиректор, ООО "СтройИнвест"</span>
+                                </div>
+                            </div>
+                            <p class="review-card__text">
+                                «Работали с "Прогресс М" по поставке щебня для
+                                крупного объекта. Все было сделано в срок,
+                                материал качественный. Отдельное спасибо
+                                менеджеру за оперативность и постоянную связь.
+                                Рекомендую как надежного партнера.»
+                            </p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-card__header">
+                                <img
+                                    src="/src/images/reviews/review-2.jpg"
+                                    alt="Аватар клиента"
+                                    class="review-card__avatar"
+                                />
+                                <div class="review-card__author">
+                                    <strong>Мария Сидорова</strong>
+                                    <span
+                                        >Начальник отдела снабжения,
+                                        "Автобан"</span
+                                    >
+                                </div>
+                            </div>
+                            <p class="review-card__text">
+                                «Заказывали аренду нескольких самосвалов и
+                                экскаватора. Техника прибыла вовремя, в отличном
+                                состоянии. Водители - настоящие профессионалы.
+                                Полностью довольны сотрудничеством, будем
+                                обращаться еще.»
+                            </p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-card__header">
+                                <img
+                                    src="/src/images/reviews/review-3.jpg"
+                                    alt="Аватар клиента"
+                                    class="review-card__avatar"
+                                />
+                                <div class="review-card__author">
+                                    <strong>Алексей Смирнов</strong>
+                                    <span>Прораб, СК "ДарСтрой"</span>
+                                </div>
+                            </div>
+                            <p class="review-card__text">
+                                «Компания "Прогресс М" выполняла для нас
+                                комплекс работ по устройству котлована. Все
+                                этапы, от геодезии до вывоза грунта, были
+                                выполнены четко и профессионально. Сроки
+                                соблюдены, что для нас было критически важно.»
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section fade-in-section section--light-bg">
+                <div class="container">
+                    <h2>Оставить отзыв</h2>
+                    <p class="section__description">
+                        Мы ценим ваше мнение и будем благодарны, если вы
+                        поделитесь впечатлениями о работе с нашей компанией.
                     </p>
-                    <a href="/contacts.html" class="btn fade-in-section"
-                        >Получить консультацию</a
-                    >
-                </div>
-            </section>
-
-            <section id="fleet-preview" class="fleet-section fade-in-section">
-                <div class="container">
-                    <h2>Наш автопарк</h2>
-                    <div class="fleet-grid">
-                        <div class="fleet-item">
-                            <img
-                                src="/src/images/carpark/car-1.jpg"
-                                alt="Самосвал FAW"
+                    <form id="review-form" class="contact-form" novalidate>
+                        <div class="form-field">
+                            <input
+                                type="text"
+                                id="review_user_name"
+                                name="user_name"
+                                placeholder="Ваше имя"
+                                required
                             />
-                            <p>FAW J6 CA3310</p>
+                            <div class="error-container"></div>
                         </div>
-                        <div class="fleet-item">
-                            <img
-                                src="/src/images/carpark/car-2.jpg"
-                                alt="Самосвал КАМАЗ"
+                        <div class="form-field">
+                            <input
+                                type="text"
+                                id="review_user_company"
+                                name="user_company"
+                                placeholder="Ваша компания (необязательно)"
                             />
-                            <p>Самосвал КАМАЗ-6520</p>
+                            <div class="error-container"></div>
                         </div>
-                        <div class="fleet-item">
-                            <img
-                                src="/src/images/carpark/car-3.jpg"
-                                alt="Автокран Liebherr"
-                            />
-                            <p>Автокран Liebherr LTM 1050</p>
+                        <div class="form-field">
+                            <textarea
+                                id="review_message"
+                                name="message"
+                                placeholder="Текст вашего отзыва"
+                                required
+                            ></textarea>
+                            <div class="error-container"></div>
                         </div>
-                    </div>
-                    <div class="section__actions">
-                        <a href="/fleet.html" class="btn"
-                            >Смотреть весь автопарк</a
-                        >
-                    </div>
-                </div>
-            </section>
-
-            <section
-                id="partners-preview"
-                class="partners-section fade-in-section"
-            >
-                <div class="container">
-                    <h2>Нам доверяют</h2>
-                    <div class="partners-logos">
-                        <img
-                            src="/src/images/partners/fsk.png"
-                            alt="Логотип партнера ФСК"
-                        />
-                        <img
-                            src="/src/images/partners/ao-urs.png"
-                            alt="Логотип партнера АО УРС"
-                        />
-                        <img
-                            src="/src/images/partners/samolet.png"
-                            alt="Логотип партнера Самолет"
-                        />
-                        <img
-                            src="/src/images/partners/autoban.png"
-                            alt="Логотип партнера Автобан"
-                        />
-                        <img
-                            src="/src/images/partners/darstroy.png"
-                            alt="Логотип партнера Дарстрой"
-                        />
-                        <img
-                            src="/src/images/partners/transingstroy.png"
-                            alt="Логотип партнера Трансинжстрой"
-                        />
-                        <img
-                            src="/src/images/partners/tsm.png"
-                            alt="Логотип партнера ТСМ"
-                        />
-                    </div>
-                    <div class="section__actions">
-                        <a href="/reviews.html" class="btn"
-                            >Читать отзывы клиентов</a
-                        >
-                    </div>
+                        <button type="submit" class="btn">
+                            Отправить отзыв
+                        </button>
+                    </form>
                 </div>
             </section>
         </main>

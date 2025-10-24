@@ -1,15 +1,13 @@
 import JustValidate from "just-validate";
 
-// Вспомогательная функция для поиска контейнера
 function getErrorContainer(form, fieldSelector) {
-    return form
-        .querySelector(fieldSelector)
-        .closest(".form-field")
-        .querySelector(".error-container");
+    const field = form.querySelector(fieldSelector);
+    if (!field) return null;
+    return field.closest(".form-field").querySelector(".error-container");
 }
 
 export class FormValidator {
-    constructor(formElement) {
+    constructor(formElement, options = {}) {
         this.form = formElement;
         this.validator = new JustValidate(this.form, {
             errorFieldCssClass: "is-invalid",
@@ -17,10 +15,25 @@ export class FormValidator {
             validateBeforeSubmitting: true,
         });
 
-        this.initValidation();
+        if (options.rules) {
+            this.initValidationWithOptions(options.rules);
+        } else {
+            this.initDefaultValidation();
+        }
     }
 
-    initValidation() {
+    initValidationWithOptions(rules) {
+        rules.forEach((item) => {
+            const errorsContainer = getErrorContainer(this.form, item.selector);
+            if (errorsContainer) {
+                this.validator.addField(item.selector, item.rules, {
+                    errorsContainer,
+                });
+            }
+        });
+    }
+
+    initDefaultValidation() {
         this.validator
             .addField(
                 "#user_name",

@@ -79,7 +79,7 @@
         />
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Прогресс М — Транспортно-строительная компания</title>
+        <title>Контакты — Прогресс М</title>
     </head>
     <body>
         <header class="header">
@@ -170,98 +170,68 @@
         </div>
 
         <main>
-            <section id="hero" class="hero-section">
-                <div class="hero-overlay"></div>
+            <section id="contacts" class="contact-section fade-in-section">
                 <div class="container">
-                    <h1 class="fade-in-section">
-                        Строим пути к успеху с Прогресс М — Ваш надежный партнер
-                        в строительстве!
-                    </h1>
-                    <p class="fade-in-section">
-                        Выполняем строительно-монтажные работы, занимаемся
-                        поставкой и перевозкой нерудных материалов по всей МО.
+                    <h2>Связаться с нами</h2>
+                    <p class="section__description">
+                        Наш менеджер свяжется с вами в течение 15 минут для
+                        уточнения деталей.
                     </p>
-                    <a href="/contacts.html" class="btn fade-in-section"
-                        >Получить консультацию</a
-                    >
-                </div>
-            </section>
-
-            <section id="fleet-preview" class="fleet-section fade-in-section">
-                <div class="container">
-                    <h2>Наш автопарк</h2>
-                    <div class="fleet-grid">
-                        <div class="fleet-item">
-                            <img
-                                src="/src/images/carpark/car-1.jpg"
-                                alt="Самосвал FAW"
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-field">
+                            <label for="user_name" class="visually-hidden"
+                                >Ваше имя</label
+                            >
+                            <input
+                                type="text"
+                                id="user_name"
+                                name="user_name"
+                                placeholder="Ваше имя"
+                                required
                             />
-                            <p>FAW J6 CA3310</p>
+                            <div class="error-container"></div>
                         </div>
-                        <div class="fleet-item">
-                            <img
-                                src="/src/images/carpark/car-2.jpg"
-                                alt="Самосвал КАМАЗ"
+                        <div class="form-field">
+                            <label for="user_phone" class="visually-hidden"
+                                >Ваш телефон</label
+                            >
+                            <input
+                                type="tel"
+                                id="user_phone"
+                                name="user_phone"
+                                placeholder="Ваш телефон"
+                                required
                             />
-                            <p>Самосвал КАМАЗ-6520</p>
+                            <div class="error-container"></div>
                         </div>
-                        <div class="fleet-item">
-                            <img
-                                src="/src/images/carpark/car-3.jpg"
-                                alt="Автокран Liebherr"
+                        <div class="form-field">
+                            <label for="user_email" class="visually-hidden"
+                                >Ваш Email</label
+                            >
+                            <input
+                                type="email"
+                                id="user_email"
+                                name="user_email"
+                                placeholder="Ваш Email"
+                                required
                             />
-                            <p>Автокран Liebherr LTM 1050</p>
+                            <div class="error-container"></div>
                         </div>
-                    </div>
-                    <div class="section__actions">
-                        <a href="/fleet.html" class="btn"
-                            >Смотреть весь автопарк</a
-                        >
-                    </div>
-                </div>
-            </section>
-
-            <section
-                id="partners-preview"
-                class="partners-section fade-in-section"
-            >
-                <div class="container">
-                    <h2>Нам доверяют</h2>
-                    <div class="partners-logos">
-                        <img
-                            src="/src/images/partners/fsk.png"
-                            alt="Логотип партнера ФСК"
-                        />
-                        <img
-                            src="/src/images/partners/ao-urs.png"
-                            alt="Логотип партнера АО УРС"
-                        />
-                        <img
-                            src="/src/images/partners/samolet.png"
-                            alt="Логотип партнера Самолет"
-                        />
-                        <img
-                            src="/src/images/partners/autoban.png"
-                            alt="Логотип партнера Автобан"
-                        />
-                        <img
-                            src="/src/images/partners/darstroy.png"
-                            alt="Логотип партнера Дарстрой"
-                        />
-                        <img
-                            src="/src/images/partners/transingstroy.png"
-                            alt="Логотип партнера Трансинжстрой"
-                        />
-                        <img
-                            src="/src/images/partners/tsm.png"
-                            alt="Логотип партнера ТСМ"
-                        />
-                    </div>
-                    <div class="section__actions">
-                        <a href="/reviews.html" class="btn"
-                            >Читать отзывы клиентов</a
-                        >
-                    </div>
+                        <div class="form-field">
+                            <label for="message" class="visually-hidden"
+                                >Комментарий к заявке</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Комментарий к заявке"
+                            ></textarea>
+                            <div class="error-container"></div>
+                        </div>
+                        <button type="submit" class="btn">
+                            Отправить заявку
+                        </button>
+                    </form>
                 </div>
             </section>
         </main>

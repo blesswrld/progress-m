@@ -14,7 +14,6 @@ export function initMobileMenu() {
         document.body.style.overflow = "";
     });
 
-    // Закрывать меню при клике на ссылку (для одностраничника)
     navLinks.forEach((link) => {
         link.addEventListener("click", () => {
             mobileNav.classList.remove("is-open");

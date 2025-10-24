@@ -1,4 +1,3 @@
-// Импортируем нашу функцию
 import { initCounterAnimation } from "./counter.js";
 
 export function initScrollObserver() {
@@ -13,15 +12,12 @@ export function initScrollObserver() {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Общая анимация для всех секций
                 entry.target.classList.add("is-visible");
 
-                // Если это наша секция со статистикой, запускаем счетчик
                 if (entry.target.id === "about") {
                     initCounterAnimation();
                 }
 
-                // Отключаем наблюдение после того, как элемент стал видимым
                 observer.unobserve(entry.target);
             }
         });
