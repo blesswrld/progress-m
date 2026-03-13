@@ -23,4 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initEmailSender();
     initReviewFormSender();
+
+    document.getElementById("copyright-year").textContent =
+        new Date().getFullYear();
 });

@@ -84,7 +84,9 @@ main {
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .service-card:hover {
@@ -201,7 +203,9 @@ main {
     max-height: 120px;
     filter: grayscale(100%);
     opacity: 0.7;
-    transition: filter 0.3s ease, opacity 0.3s ease;
+    transition:
+        filter 0.3s ease,
+        opacity 0.3s ease;
 }
 
 .partners-logos img:hover {

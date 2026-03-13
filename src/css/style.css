@@ -78,7 +78,9 @@ img {
     text-align: center;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
 }
 
 .btn:hover {

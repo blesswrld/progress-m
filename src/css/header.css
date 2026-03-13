@@ -28,7 +28,7 @@
 }
 
 .logo img {
-    height: 40px;
+    height: 45px;
 }
 
 .logo-text {
@@ -124,7 +124,9 @@
     height: 3px;
     background-color: var(--dark-color);
     margin: 5px 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
 }
 
 .mobile-nav {

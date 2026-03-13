@@ -1,10 +1,12 @@
 :root {
-    --primary-color: #009688;
-    --primary-dark-color: #00796b;
-    --dark-color: #212121;
-    --text-color: #424242;
+    --primary-color: #d0a13a;
+    --primary-dark-color: #a8802a;
+
+    --dark-color: #1a1a1a;
+    --text-color: #333333;
+
     --light-color: #ffffff;
-    --background-light-gray: #f5f5f5;
+    --background-light-gray: #f9f9f9;
 
     --font-family: "Inter", system-ui, -apple-system, sans-serif;
     --container-width: 1200px;

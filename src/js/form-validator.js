@@ -43,7 +43,7 @@ export class FormValidator {
                         errorMessage: "Пожалуйста, введите ваше имя.",
                     },
                 ],
-                { errorsContainer: getErrorContainer(this.form, "#user_name") }
+                { errorsContainer: getErrorContainer(this.form, "#user_name") },
             )
             .addField(
                 "#user_phone",
@@ -58,7 +58,12 @@ export class FormValidator {
                         errorMessage: "Введите корректный номер телефона.",
                     },
                 ],
-                { errorsContainer: getErrorContainer(this.form, "#user_phone") }
+                {
+                    errorsContainer: getErrorContainer(
+                        this.form,
+                        "#user_phone",
+                    ),
+                },
             )
             .addField(
                 "#user_email",
@@ -72,7 +77,12 @@ export class FormValidator {
                         errorMessage: "Введите корректный email адрес.",
                     },
                 ],
-                { errorsContainer: getErrorContainer(this.form, "#user_email") }
+                {
+                    errorsContainer: getErrorContainer(
+                        this.form,
+                        "#user_email",
+                    ),
+                },
             );
     }
 

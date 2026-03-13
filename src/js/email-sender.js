@@ -14,7 +14,7 @@ export function initEmailSender() {
         event.preventDefault();
 
         const serviceID = "service_n0lglt9";
-        const templateID = "template_e6p95e9";
+        const templateID = "template_eop4mqv";
         const publicKey = "VlUZjYSOEjkIVlqxS";
 
         submitButton.disabled = true;
@@ -26,14 +26,14 @@ export function initEmailSender() {
                 () => {
                     showNotification(
                         "Ваша заявка успешно отправлена!",
-                        "success"
+                        "success",
                     );
                     form.reset();
                 },
                 (err) => {
                     showNotification("Произошла ошибка при отправке.", "error");
                     console.error("EMAILJS FAILED...", err);
-                }
+                },
             )
             .finally(() => {
                 submitButton.disabled = false;
@@ -76,7 +76,7 @@ export function initReviewFormSender() {
         event.preventDefault();
 
         const serviceID = "service_n0lglt9";
-        const templateID = "template_e6p95e9";
+        const templateID = "template_eop4mqv";
         const publicKey = "VlUZjYSOEjkIVlqxS";
 
         submitButton.disabled = true;
@@ -92,7 +92,7 @@ export function initReviewFormSender() {
                 (err) => {
                     showNotification("Произошла ошибка при отправке.", "error");
                     console.error("EMAILJS FAILED...", err);
-                }
+                },
             )
             .finally(() => {
                 submitButton.disabled = false;
