@@ -148,6 +148,25 @@ img {
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-light-gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border: 2px solid var(--background-light-gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-dark-color);
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
