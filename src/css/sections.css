@@ -58,6 +58,7 @@ main {
     align-items: center;
     gap: 10px;
     font-weight: 400;
+    border-radius: 3px;
 }
 
 .hero-section h1 {
