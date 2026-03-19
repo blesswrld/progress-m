@@ -2,16 +2,17 @@ import Toastify from "toastify-js";
 
 export function showNotification(message, type = "info") {
     let backgroundColor;
+    let textColor = "#ffffff";
 
     switch (type) {
         case "success":
-            backgroundColor = "linear-gradient(to right, #00b09b, #96c93d)";
+            backgroundColor = "var(--primary-color)";
             break;
         case "error":
-            backgroundColor = "linear-gradient(to right, #ff5f6d, #ffc371)";
+            backgroundColor = "#dc3545";
             break;
         default:
-            backgroundColor = "linear-gradient(to right, #6a11cb, #2575fc)";
+            backgroundColor = "var(--dark-color)";
             break;
     }
 
@@ -24,6 +25,9 @@ export function showNotification(message, type = "info") {
         stopOnFocus: true,
         style: {
             background: backgroundColor,
+            color: textColor,
+            "border-radius": "8px",
         },
+        className: `toastify-notification toastify-notification--${type}`,
     }).showToast();
 }

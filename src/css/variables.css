@@ -1,15 +1,15 @@
 :root {
     --primary-color: #d0a13a;
     --primary-dark-color: #a8802a;
-
     --dark-color: #1a1a1a;
-    --text-color: #333333;
-
+    --text-color: #4a4a4a;
     --light-color: #ffffff;
-    --background-light-gray: #f9f9f9;
+    --background-light-gray: #f4f4f4;
+    --border-color: #e5e5e5;
 
-    --font-family: "Inter", system-ui, -apple-system, sans-serif;
-    --container-width: 1200px;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+
+    --container-width: 1280px;
+    --border-radius: 50px;
+    --box-shadow: none;
 }

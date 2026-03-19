@@ -18,41 +18,16 @@
                 </a>
                 <nav class="desktop-nav">
                     <ul>
-                        <li>
-                            <a href="#services">
-                                <span
-                                    class="nav-icon nav-icon--services"
-                                ></span>
-                                Наши услуги
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#about">
-                                <span class="nav-icon nav-icon--about"></span>
-                                О нас
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">
-                                <span
-                                    class="nav-icon nav-icon--portfolio"
-                                ></span>
-                                Проекты
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contacts">
-                                <span
-                                    class="nav-icon nav-icon--contacts"
-                                ></span>
-                                Контакты
-                            </a>
-                        </li>
+                        <li><a href="#services">Наши услуги</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#portfolio">Проекты</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header-contact">
-                    <span>г. Москва</span>
-                    <a href="tel:+79651766666">+7 965 176 66 66</a>
+                    <a href="#contacts" class="btn btn--outline"
+                        >Оставить заявку</a
+                    >
                 </div>
                 <button class="burger-menu" id="burger-menu">
                     <span></span>
@@ -65,30 +40,10 @@
         <div class="mobile-nav" id="mobile-nav">
             <button class="close-btn" id="close-btn">&times;</button>
             <ul>
-                <li>
-                    <a href="#services">
-                        <span class="nav-icon nav-icon--services"></span>
-                        Наши услуги
-                    </a>
-                </li>
-                <li>
-                    <a href="#about">
-                        <span class="nav-icon nav-icon--about"></span>
-                        О нас
-                    </a>
-                </li>
-                <li>
-                    <a href="#portfolio">
-                        <span class="nav-icon nav-icon--portfolio"></span>
-                        Проекты
-                    </a>
-                </li>
-                <li>
-                    <a href="#contacts">
-                        <span class="nav-icon nav-icon--contacts"></span>
-                        Контакты
-                    </a>
-                </li>
+                <li><a href="#services">Наши услуги</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#portfolio">Проекты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
                 <li>
                     <a href="tel:+79651766666" class="mobile-nav__phone"
                         >+7 965 176 66 66</a
@@ -100,18 +55,72 @@
         <main>
             <section id="hero" class="hero-section">
                 <div class="hero-overlay"></div>
-                <div class="container">
-                    <h1 class="fade-in-section">
-                        Строим пути к успеху с Прогресс М — Ваш надежный партнер
-                        в строительстве!
-                    </h1>
-                    <p class="fade-in-section">
-                        Выполняем строительно-монтажные работы, занимаемся
-                        поставкой и перевозкой нерудных материалов по всей МО.
-                    </p>
-                    <a href="#contacts" class="btn fade-in-section"
-                        >Получить консультацию</a
-                    >
+
+                <div class="container hero__content-wrapper">
+                    <div class="hero__text-content">
+                        <div class="hero__badges fade-in-section">
+                            <div class="glass-badge">
+                                <span class="badge-icon"
+                                    ><img
+                                        src="/icons/phone-call.png"
+                                        alt="24/7 на связи"
+                                        width="16"
+                                        height="16"
+                                /></span>
+                                На связи 24/7
+                            </div>
+                            <div class="glass-badge">
+                                <span class="badge-icon"
+                                    ><img
+                                        src="/icons/timer.png"
+                                        alt="Таймер"
+                                        width="16"
+                                        height="16"
+                                /></span>
+                                Соблюдаем сроки
+                            </div>
+                        </div>
+
+                        <h1 class="fade-in-section">
+                            Строим пути к успеху с Прогресс М
+                        </h1>
+                        <p class="hero__subtitle fade-in-section">
+                            Ваш надежный партнер в строительстве. Поставка
+                            материалов и строительно-монтажные работы по всей
+                            МО.
+                        </p>
+
+                        <div class="hero__footer-info fade-in-section">
+                            <div class="info-item">
+                                <img
+                                    src="/icons/building.png"
+                                    alt="Объекты"
+                                    width="16"
+                                    height="16"
+                                />
+                                <span>100+ сданных объектов</span>
+                            </div>
+                            <span class="divider">|</span>
+                            <div class="info-item">
+                                <img
+                                    src="/icons/star.png"
+                                    alt="Звезда"
+                                    width="16"
+                                    height="16"
+                                />
+                                <span>2+ года на рынке</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__action-content fade-in-section">
+                        <a href="#contacts" class="btn--circle">
+                            <span class="circle-text"
+                                >Получить<br />консультацию</span
+                            >
+                            <span class="circle-arrow">↗</span>
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -192,38 +201,80 @@
                 </div>
             </section>
 
-            <section id="about" class="stats-section fade-in-section">
-                <div class="container">
-                    <h2 class="heading--light">О компании в цифрах</h2>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <strong data-target="2" data-suffix="+">0</strong>
-                            <span>лет на рынке</span>
+            <section id="about" class="about-section fade-in-section">
+                <div class="container about__container">
+                    <div class="about__image-wrapper">
+                        <img
+                            src="/bg/progress-m/progressm-bg.jpg"
+                            alt="Строительство Прогресс М"
+                            class="about__img"
+                        />
+                    </div>
+
+                    <div class="about__content">
+                        <div
+                            class="section-label"
+                            style="color: var(--light-color)"
+                        >
+                            О НАС
                         </div>
-                        <div class="stat-item">
-                            <strong data-target="50" data-suffix="+">0</strong>
-                            <span>единиц в автопарке</span>
+
+                        <h2 class="heading--light about__title">
+                            ПРОГРЕСС М — ВАШ<br />НАДЕЖНЫЙ ПАРТНЕР
+                        </h2>
+
+                        <p class="about__description">
+                            Это не просто поставка материалов, а комплексный
+                            подход к строительству. За годы работы на рынке мы
+                            заработали репутацию надежного подрядчика и
+                            сформировали партнерскую сеть из самых крупных
+                            застройщиков МО.
+                        </p>
+
+                        <div class="about__stats">
+                            <div class="stat-item--premium">
+                                <strong data-target="2" data-suffix="+"
+                                    >0</strong
+                                >
+                                <span>Года на рынке</span>
+                            </div>
+                            <div class="stat-item--premium">
+                                <strong data-target="50" data-suffix="+"
+                                    >0</strong
+                                >
+                                <span>Единиц спецтехники</span>
+                            </div>
+                            <div class="stat-item--premium">
+                                <strong data-target="100" data-suffix="+"
+                                    >0</strong
+                                >
+                                <span>Сданных объектов</span>
+                            </div>
+                            <div class="stat-item--premium">
+                                <strong data-target="24/7">24/7</strong>
+                                <span>На связи с клиентом</span>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <strong data-target="100" data-suffix="+">0</strong>
-                            <span>успешно сданных объектов</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong data-target="24/7">24/7</strong>
-                            <span>на связи с клиентом</span>
-                        </div>
+
+                        <a
+                            href="#contacts"
+                            class="btn btn--outline-light"
+                            style="margin-top: 40px"
+                            >Узнать больше ↗</a
+                        >
                     </div>
                 </div>
             </section>
 
             <section id="advantages" class="advantages-section fade-in-section">
                 <div class="container">
-                    <h2>Наши преимущества</h2>
+                    <div class="section-label">Надежность</div>
+                    <h2 class="page-title">Наши преимущества</h2>
                     <div class="advantages-grid">
-                        <div class="advantage-item">
+                        <div class="advantage-card">
                             <img
                                 src="/icons/carpark.png"
-                                alt="Иконка автопарка"
+                                alt="Собственный автопарк"
                                 class="advantage-icon"
                             />
                             <h3>Собственный автопарк</h3>
@@ -232,10 +283,10 @@
                                 посредников.
                             </p>
                         </div>
-                        <div class="advantage-item">
+                        <div class="advantage-card">
                             <img
                                 src="/icons/team.png"
-                                alt="Иконка команды"
+                                alt="Опытная команда"
                                 class="advantage-icon"
                             />
                             <h3>Опытная команда</h3>
@@ -244,10 +295,10 @@
                                 многолетним стажем.
                             </p>
                         </div>
-                        <div class="advantage-item">
+                        <div class="advantage-card">
                             <img
                                 src="/icons/deadline.png"
-                                alt="Иконка сроков"
+                                alt="Соблюдение сроков"
                                 class="advantage-icon"
                             />
                             <h3>Точное соблюдение сроков</h3>
@@ -256,10 +307,10 @@
                                 договоре.
                             </p>
                         </div>
-                        <div class="advantage-item">
+                        <div class="advantage-card">
                             <img
                                 src="/icons/quality.png"
-                                alt="Иконка качества"
+                                alt="Гарантия качества"
                                 class="advantage-icon"
                             />
                             <h3>Гарантия качества</h3>
@@ -391,35 +442,66 @@
 
             <section id="partners" class="partners-section fade-in-section">
                 <div class="container">
-                    <h2>Нам доверяют</h2>
+                    <div class="section-label">Доверие</div>
+                    <h2 class="page-title">Нам доверяют</h2>
+                </div>
+                <div class="partners-slider">
                     <div class="partners-logos">
                         <img
                             src="/src/images/partners/fsk.png"
-                            alt="Логотип партнера ФСК"
+                            alt="Логотип ФСК"
                         />
                         <img
                             src="/src/images/partners/ao-urs.png"
-                            alt="Логотип партнера АО УРС"
+                            alt="Логотип АО УРС"
                         />
                         <img
                             src="/src/images/partners/samolet.png"
-                            alt="Логотип партнера Самолет"
+                            alt="Логотип Самолет"
                         />
                         <img
                             src="/src/images/partners/autoban.png"
-                            alt="Логотип партнера Автобан"
+                            alt="Логотип Автобан"
                         />
                         <img
                             src="/src/images/partners/darstroy.png"
-                            alt="Логотип партнера Дарстрой"
+                            alt="Логотип Дарстрой"
                         />
                         <img
                             src="/src/images/partners/transingstroy.png"
-                            alt="Логотип партнера Трансинжстрой"
+                            alt="Логотип Трансинжстрой"
                         />
                         <img
                             src="/src/images/partners/tsm.png"
-                            alt="Логотип партнера ТСМ"
+                            alt="Логотип ТСМ"
+                        />
+                        <img
+                            src="/src/images/partners/fsk.png"
+                            alt="Логотип ФСК"
+                        />
+                        <img
+                            src="/src/images/partners/ao-urs.png"
+                            alt="Логотип АО УРС"
+                        />
+                        <img
+                            src="/src/images/partners/samolet.png"
+                            alt="Логотип Самолет"
+                        />
+                        <img
+                            src="/src/images/partners/autoban.png"
+                            alt="Логотип Автобан"
+                        />
+                        <img
+                            src="/src/images/partners/darstroy.png"
+                            alt="Логотип Дарстрой"
+                        />
+                        <img
+                            src="/src/images/partners/transingstroy.png"
+                            alt="Логотип Трансинжстрой"
+                        />
+                        <img
+                            src="/src/images/partners/tsm.png"
+                            alt="Логотип ТСМ"
                         />
                     </div>
                 </div>
@@ -427,70 +509,67 @@
 
             <section id="reviews" class="reviews-section fade-in-section">
                 <div class="container">
-                    <h2>Отзывы наших клиентов</h2>
+                    <div class="section-label">Наши клиенты</div>
+                    <h2
+                        class="page-title"
+                        style="
+                            max-width: 900px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        "
+                    >
+                        Отзывы наших клиентов
+                    </h2>
+
                     <div class="reviews-grid">
                         <div class="review-card">
-                            <div class="review-card__header">
+                            <div class="review-quote">“</div>
+                            <p class="review-text">
+                                Добрый день! Хочу поблагодарить вас и вашу
+                                команду за сотрудничество. Без вас, наверное,
+                                ничего бы не получилось!
+                            </p>
+                            <div class="review-author">
                                 <img
                                     src="/src/images/reviews/review-1.jpg"
-                                    alt="Аватар клиента"
-                                    class="review-card__avatar"
+                                    alt="Иван Петров"
+                                    class="review-avatar"
                                 />
-                                <div class="review-card__author">
-                                    <strong>Иван Петров</strong>
-                                    <span>Гендиректор, ООО "СтройИнвест"</span>
-                                </div>
+                                <strong>Иван Петров</strong>
                             </div>
-                            <p class="review-card__text">
-                                «Работали с "Прогресс М" по поставке щебня для
-                                крупного объекта. Все было сделано в срок,
-                                материал качественный. Отдельное спасибо
-                                менеджеру за оперативность и постоянную связь.
-                                Рекомендую как надежного партнера.»
-                            </p>
                         </div>
                         <div class="review-card">
-                            <div class="review-card__header">
+                            <div class="review-quote">“</div>
+                            <p class="review-text">
+                                Спасибо команде SaMarzo! Я думала, что мне долго
+                                придется ждать одобрения ВТБ, очень оперативно.
+                                Я очень рада!
+                            </p>
+                            <div class="review-author">
                                 <img
                                     src="/src/images/reviews/review-2.jpg"
-                                    alt="Аватар клиента"
-                                    class="review-card__avatar"
+                                    alt="Мария Сидорова"
+                                    class="review-avatar"
                                 />
-                                <div class="review-card__author">
-                                    <strong>Мария Сидорова</strong>
-                                    <span
-                                        >Начальник отдела снабжения,
-                                        "Автобан"</span
-                                    >
-                                </div>
+                                <strong>Мария Сидорова</strong>
                             </div>
-                            <p class="review-card__text">
-                                «Заказывали аренду нескольких самосвалов и
-                                экскаватора. Техника прибыла вовремя, в отличном
-                                состоянии. Водители - настоящие профессионалы.
-                                Полностью довольны сотрудничеством, будем
-                                обращаться еще.»
-                            </p>
                         </div>
                         <div class="review-card">
-                            <div class="review-card__header">
+                            <div class="review-quote">“</div>
+                            <p class="review-text">
+                                Хотел огромное вам спасибо за помощь. Я даже не
+                                ожидал, что так быстро можно все пройти. Мы всей
+                                семьей Вам очень благодарны, даже нет слов,
+                                чтобы описать!!!
+                            </p>
+                            <div class="review-author">
                                 <img
                                     src="/src/images/reviews/review-3.jpg"
-                                    alt="Аватар клиента"
-                                    class="review-card__avatar"
+                                    alt="Алексей Смирнов"
+                                    class="review-avatar"
                                 />
-                                <div class="review-card__author">
-                                    <strong>Алексей Смирнов</strong>
-                                    <span>Прораб, СК "ДарСтрой"</span>
-                                </div>
+                                <strong>Алексей Смирнов</strong>
                             </div>
-                            <p class="review-card__text">
-                                «Компания "Прогресс М" выполняла для нас
-                                комплекс работ по устройству котлована. Все
-                                этапы, от геодезии до вывоза грунта, были
-                                выполнены четко и профессионально. Сроки
-                                соблюдены, что для нас было критически важно.»
-                            </p>
                         </div>
                     </div>
                 </div>
