@@ -556,7 +556,7 @@ main {
 }
 
 .contact-form {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
