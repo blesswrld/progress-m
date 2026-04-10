@@ -83,7 +83,7 @@ section {
 }
 
 .section--light-bg {
-    background-color: var(--background-light-gray);
+    background-color: var(--light-color);
 }
 
 .section__description {
