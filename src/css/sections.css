@@ -391,6 +391,147 @@ main {
     filter: brightness(0.9);
 }
 
+.real-estate-services-section {
+    background-color: #ffffff;
+    padding: 100px 0 100px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-section::after,
+.real-estate-services-section::before,
+.real-estate-services-section::after {
+    display: none !important;
+}
+
+.real-estate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.real-estate-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 46px 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.real-estate-card:hover {
+    background: var(--primary-color, #0066ff);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.16);
+    transform: translateY(-9px);
+}
+
+.real-estate-card:hover h3,
+.real-estate-card:hover p,
+.real-estate-card:hover .real-estate-card__link {
+    color: #ffffff;
+}
+
+.real-estate-card__icon {
+    width: 56px;
+    height: 56px;
+    background: #f0f4ff;
+    color: var(--primary-color, #0066ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.real-estate-card:hover .real-estate-card__icon {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    transform: scale(1.13) rotate(10deg);
+}
+
+.real-estate-card h3 {
+    font-size: 1.36rem;
+    line-height: 1.35;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-weight: 600;
+    transition: color 0.45s ease;
+}
+
+.real-estate-card p {
+    flex-grow: 1;
+    color: #555555;
+    line-height: 1.76;
+    margin-bottom: 28px;
+    transition: color 0.45s ease;
+}
+
+.real-estate-card__link {
+    color: var(--primary-color, #0066ff);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.97rem;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.45s ease;
+}
+
+.real-estate-card:hover .real-estate-card__link {
+    color: #ffffff;
+}
+
+.real-estate-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    min-height: 420px;
+}
+
+.real-estate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.real-estate-image:hover img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 992px) {
+    .real-estate-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .real-estate-image {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 576px) {
+    .real-estate-card {
+        padding: 36px 28px;
+    }
+
+    .real-estate-services-section {
+        padding: 110px 0 80px;
+    }
+}
+
 .advantages-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
