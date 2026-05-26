@@ -4,6 +4,25 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#ffffff" />
+        <meta
+            name="description"
+            content="Прогресс М — строительно-монтажные работы, поставка песка и щебня, услуги недвижимости в Москве и Московской области."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://tskprogress.ru/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="ru_RU" />
+        <meta
+            property="og:title"
+            content="Прогресс М — Транспортно-строительная компания"
+        />
+        <meta
+            property="og:description"
+            content="Строительство, поставка материалов и услуги недвижимости. Работаем по Москве и МО."
+        />
+        <meta property="og:image" content="/progressm-logo.png" />
+        <meta property="og:url" content="https://tskprogress.ru/" />
 
         <link rel="icon" type="image/png" href="/progressm-logo.png" />
 
@@ -25,7 +44,6 @@
                             >
                         </li>
                         <li><a href="#about">О нас</a></li>
-                        <!-- <li><a href="#portfolio">Проекты</a></li> -->
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
@@ -34,7 +52,14 @@
                         >Оставить заявку</a
                     >
                 </div>
-                <button class="burger-menu" id="burger-menu">
+                <button
+                    type="button"
+                    class="burger-menu"
+                    id="burger-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-nav"
+                    aria-label="Открыть меню"
+                >
                     <span></span>
                     <span></span>
                     <span></span>
@@ -42,13 +67,26 @@
             </div>
         </header>
 
-        <div class="mobile-nav" id="mobile-nav">
-            <button class="close-btn" id="close-btn">&times;</button>
+        <div
+            class="mobile-nav"
+            id="mobile-nav"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Главное меню"
+            aria-hidden="true"
+        >
+            <button
+                type="button"
+                class="close-btn"
+                id="close-btn"
+                aria-label="Закрыть меню"
+            >
+                &times;
+            </button>
             <ul>
                 <li><a href="#services">Наши услуги</a></li>
                 <li><a href="#real-estate-services">Услуги недвижимости</a></li>
                 <li><a href="#about">О нас</a></li>
-                <!-- <li><a href="#portfolio">Проекты</a></li> -->
                 <li><a href="#contacts">Контакты</a></li>
                 <li>
                     <a href="tel:+79651766666" class="mobile-nav__phone"
@@ -140,10 +178,7 @@
                         <div class="services-grid">
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card1.png&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card1"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Устройство ограждающих конструкций</h4>
@@ -155,10 +190,7 @@
                             </div>
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card2.jpg&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card2"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Возведение стен и перегородок</h4>
@@ -170,10 +202,7 @@
                             </div>
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card3.jpg&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card3"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Устройство кровли</h4>
@@ -186,10 +215,7 @@
                             </div>
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card4.jpg&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card4"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Отделочные работы</h4>
@@ -210,10 +236,7 @@
                         <div class="services-grid">
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card5.jpg&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card5"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Поставка песка</h4>
@@ -226,10 +249,7 @@
                             </div>
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card6.jpg&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card6"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Поставка гравийного щебня</h4>
@@ -241,10 +261,7 @@
                             </div>
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card7.jpg&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card7"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Поставка известнякового щебня</h4>
@@ -257,10 +274,7 @@
                             </div>
                             <div class="service-card">
                                 <div
-                                    class="service-card__background"
-                                    style="
-                                        background-image: url(&quot;/bg/cards-bg/card8.jpg&quot;);
-                                    "
+                                    class="service-card__background service-card__background--card8"
                                 ></div>
                                 <div class="service-card__content">
                                     <h4>Смеси ЩПС С4 и С5</h4>
@@ -287,12 +301,7 @@
                     </div>
 
                     <div class="about__content">
-                        <div
-                            class="section-label"
-                            style="color: var(--light-color)"
-                        >
-                            О НАС
-                        </div>
+                        <div class="section-label">О НАС</div>
 
                         <h2 class="heading--light about__title">
                             ПРОГРЕСС М — ВАШ<br />НАДЕЖНЫЙ ПАРТНЕР
@@ -331,10 +340,7 @@
                             </div>
                         </div>
 
-                        <a
-                            href="#contacts"
-                            class="btn btn--outline-light"
-                            style="margin-top: 40px"
+                        <a href="#contacts" class="btn btn--outline-light"
                             >Узнать больше ↗</a
                         >
                     </div>
@@ -717,16 +723,7 @@
             <section id="reviews" class="reviews-section fade-in-section">
                 <div class="container">
                     <div class="section-label">Наши клиенты</div>
-                    <h2
-                        class="page-title"
-                        style="
-                            max-width: 900px;
-                            margin-left: auto;
-                            margin-right: auto;
-                        "
-                    >
-                        Отзывы наших клиентов
-                    </h2>
+                    <h2 class="page-title">Отзывы наших клиентов</h2>
 
                     <div class="reviews-grid">
                         <div class="review-card">

@@ -182,6 +182,14 @@ main {
     color: var(--light-color);
 }
 
+.about__content .section-label {
+    color: var(--light-color);
+}
+
+.about__content .btn {
+    margin-top: 40px;
+}
+
 .about__title {
     font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 200;
@@ -229,8 +237,7 @@ main {
 }
 
 .services-section,
-.advantages-section,
-.portfolio-section {
+.advantages-section {
     background-color: var(--background-light-gray);
     padding: 150px 0;
 }
@@ -339,6 +346,38 @@ main {
     transform: scale(1.05);
     transition: transform 0.4s ease;
     z-index: 0;
+}
+
+.service-card__background--card1 {
+    background-image: url("/bg/cards-bg/card1.png");
+}
+
+.service-card__background--card2 {
+    background-image: url("/bg/cards-bg/card2.jpg");
+}
+
+.service-card__background--card3 {
+    background-image: url("/bg/cards-bg/card3.jpg");
+}
+
+.service-card__background--card4 {
+    background-image: url("/bg/cards-bg/card4.jpg");
+}
+
+.service-card__background--card5 {
+    background-image: url("/bg/cards-bg/card5.jpg");
+}
+
+.service-card__background--card6 {
+    background-image: url("/bg/cards-bg/card6.jpg");
+}
+
+.service-card__background--card7 {
+    background-image: url("/bg/cards-bg/card7.jpg");
+}
+
+.service-card__background--card8 {
+    background-image: url("/bg/cards-bg/card8.jpg");
 }
 
 .service-card:hover .service-card__background {
@@ -569,35 +608,6 @@ main {
     line-height: 1.8;
     font-size: 0.9rem;
     margin: 0;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.project-card {
-    background-color: var(--light-color);
-    border-radius: 0;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
-}
-
-.project-card img {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 40px;
-}
-
-.project-info h3 {
-    font-weight: 400;
-    font-size: 1.2rem;
-    margin-top: 0;
 }
 
 .full-services-section {
@@ -970,7 +980,6 @@ main {
 
     .services-grid,
     .advantages-grid,
-    .portfolio-grid,
     .reviews-grid {
         grid-template-columns: 1fr;
     }

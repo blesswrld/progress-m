@@ -3,27 +3,41 @@ import "toastify-js/src/toastify.css";
 import "../css/style.css";
 import { initMobileMenu } from "./mobile-menu.js";
 import { initScrollObserver } from "./observer.js";
-import { initEmailSender, initReviewFormSender } from "./email-sender.js";
+import { initEmailSender } from "./email-sender.js";
 
 function initHeaderScroll() {
     const header = document.querySelector(".header");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
+    if (!header) return;
+
+    let ticking = false;
+
+    const update = () => {
+        header.classList.toggle("scrolled", window.scrollY > 50);
+        ticking = false;
+    };
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(update);
+            }
+        },
+        { passive: true },
+    );
+
+    update();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
     initScrollObserver();
     initHeaderScroll();
-
     initEmailSender();
-    initReviewFormSender();
 
-    document.getElementById("copyright-year").textContent =
-        new Date().getFullYear();
+    const yearEl = document.getElementById("copyright-year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 });

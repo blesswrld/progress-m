@@ -1,14 +1,12 @@
-const animateCounter = (element, target, suffix, duration) => {
-    let start = 0;
-    const end = parseInt(target, 10);
-    if (isNaN(end)) return;
+let countersAnimated = false;
 
+const animateCounter = (element, target, suffix, duration) => {
     let startTime = null;
+    const end = parseInt(target, 10);
 
     const step = (timestamp) => {
         if (!startTime) startTime = timestamp;
         const progress = Math.min((timestamp - startTime) / duration, 1);
-
         const currentValue = Math.floor(progress * end);
         element.textContent = currentValue + (suffix || "");
 
@@ -21,6 +19,8 @@ const animateCounter = (element, target, suffix, duration) => {
 };
 
 export function initCounterAnimation() {
+    if (countersAnimated) return;
+
     const statsSection = document.getElementById("about");
     if (!statsSection) return;
 
@@ -37,4 +37,6 @@ export function initCounterAnimation() {
             counter.textContent = target;
         }
     });
+
+    countersAnimated = true;
 }
